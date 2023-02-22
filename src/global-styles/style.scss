@@ -1,0 +1,157 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--color-primary-blue);
+  color: var(--color-secondary-white);
+}
+
+p {
+  color: var(--color-on-surface);
+}
+
+.describ-area-component {
+  position: relative;
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  h3 {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.2%;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.2%;
+    font-weight: 500;
+  }
+
+  @media (max-width: 834px) {
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    width: 50%;
+    font-size: 16px;
+    letter-spacing: 0;
+    font-weight: 400;
+    padding: 50px;
+    transition: all 0.25s;
+
+    @media (max-width: 834px) {
+      width: 100%;
+    }
+    @media (max-width: 500px) {
+      padding: 10px;
+    }
+  }
+
+  &__items {
+    transition: all 0.25s;
+    width: 50%;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-weight: regular;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 15px;
+    padding: 50px;
+    @media (max-width: 834px) {
+      width: 100%;
+    }
+    @media (max-width: 500px) {
+      grid-template-columns: repeat(1, 100%);
+      padding: 10px;
+    }
+
+    &-item {
+      min-height: 150px;
+      background: var(--color-secondary-grey);
+      padding: 15px;
+      border-radius: 24px;
+      -webkit-border-radius: 24px;
+      -moz-border-radius: 24px;
+      -ms-border-radius: 24px;
+      -o-border-radius: 24px;
+
+      @media (max-width: 500px) {
+        border-radius: 16px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+      }
+
+      .ml {
+        color: var(--color-primary-pink);
+        background-color: rgba(#ca59ff, 0.2);
+      }
+
+      .cv {
+        color: var(--color-primary-purple);
+        background-color: rgba(#6c7cff, 0.2);
+      }
+
+      .nl {
+        color: var(--color-primary-cyan);
+        background-color: rgba(#2affff, 0.2);
+      }
+
+      .rob {
+        color: var(--color-primary-yellow);
+        background-color: rgba(#fff629, 0.2);
+      }
+
+      &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        -o-border-radius: 24px;
+
+        @media (max-width: 500px) {
+          border-radius: 16px;
+          -webkit-border-radius: 16px;
+          -moz-border-radius: 16px;
+          -ms-border-radius: 16px;
+          -o-border-radius: 16px;
+        }
+      }
+
+      &-desc {
+        color: var(--color-secondary-white);
+        margin: auto;
+        text-align: center;
+        p {
+          color: rgba(#fff, 0.4);
+        }
+      }
+    }
+  }
+}
